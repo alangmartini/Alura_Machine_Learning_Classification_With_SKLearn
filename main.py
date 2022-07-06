@@ -54,6 +54,7 @@ test_size = len(test_x)
 accuracy = n_corretos/test_size
 print(f"A taxa de acerto é: {accuracy * 100}%")
 
+#Testing accucary with native sklearn function
 from sklearn.metrics import accuracy_score
 
 accuracy_sklearn = accuracy_score(test_x, predicts)
