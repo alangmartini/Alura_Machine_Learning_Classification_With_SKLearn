@@ -8,8 +8,8 @@ from sensitive import uri
 SEED = 20
 
 
-dados = my_csv = pd.read_csv(uri)
-#Here we map the columns name to something that makes more sence to us, making it easier to be worked
+dados = pd.read_csv(uri)
+#Here we map the columns name to something that makes more sense to us, making it easier to be worked
 map = {
     "home": "iniciar",
     "how_it_works": "como_funciona",
@@ -24,7 +24,7 @@ x = dados[["iniciar", "como_funciona", "contato"]]
 y = dados["se_comprou"]
 
 train_x, test_x, train_y, test_y = train_test_split(x, y, 
-                                                    stratify = y, #Stratify is responsible for proportionally separating train_y and test_y, so it has the a close proportion of values
+                                                    stratify = y, #Stratify is responsible for proportionally separating train_y and test_y, so it has a close proportion of values
                                                     random_state = SEED, 
                                                     test_size = 0.25) 
 
